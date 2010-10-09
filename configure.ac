@@ -209,7 +209,7 @@ docs/Makefile
 docs/reference/Makefile
 libmatenotify.pc
 libmatenotify/Makefile
-libmatenotify/features.h
+libmatenotify/notify-features.h
 tests/Makefile
 tools/Makefile
 ])

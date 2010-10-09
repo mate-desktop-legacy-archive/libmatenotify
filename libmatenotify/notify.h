@@ -27,7 +27,7 @@
 
 #include <libmatenotify/notification.h>
 #include <libmatenotify/notify-enum-types.h>
-#include <libmatenotify/features.h>
+#include <libmatenotify/notify-features.h>
 
 #ifdef __cplusplus
 extern "C" {
