@@ -8,6 +8,7 @@ lib_LTLIBRARIES = libmatenotify.la
 
 notify_headers = \
 	notify.h \
+	features.h \
 	notification.h
 
 notifyinc_HEADERS = \

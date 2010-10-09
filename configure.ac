@@ -17,6 +17,10 @@ LIBMATENOTIFY_MINOR_VERSION=5
 LIBMATENOTIFY_MICRO_VERSION=0
 LIBMATENOTIFY_DEVEL_VERSION=0
 
+AC_SUBST(LIBMATENOTIFY_MAJOR_VERSION)
+AC_SUBST(LIBMATENOTIFY_MINOR_VERSION)
+AC_SUBST(LIBMATENOTIFY_MICRO_VERSION)
+
 LIBMATENOTIFY_VERSION=$LIBMATENOTIFY_MAJOR_VERSION.$LIBMATENOTIFY_MINOR_VERSION.$LIBMATENOTIFY_MICRO_VERSION
 
 if test "x$LIBMATENOTIFY_DEVEL_VERSION" != "x0"; then
@@ -31,6 +35,7 @@ AC_DEFINE_UNQUOTED(LIBMATENOTIFY_MICRO_VERSION, $LIBMATENOTIFY_MICRO_VERSION,
 	[libmatenotify micro version.])
 AC_DEFINE_UNQUOTED(LIBMATENOTIFY_VERSION, "$LIBMATENOTIFY_VERSION",
 	[libmatenotify version.])
+
 
 dnl ################################################################
 dnl # libtool versioning
@@ -204,6 +209,7 @@ docs/Makefile
 docs/reference/Makefile
 libmatenotify.pc
 libmatenotify/Makefile
+libmatenotify/features.h
 tests/Makefile
 tools/Makefile
 ])
