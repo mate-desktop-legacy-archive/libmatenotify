@@ -7,7 +7,10 @@ common_ldflags = \
 mate_notify_send_SOURCES = notify-send.c
 mate_notify_send_LDADD   = $(common_ldflags)
 
-INCLUDES = $(PACKAGE_CFLAGS)	\
-	-I$(top_srcdir)
+INCLUDES = \
+	-I$(top_srcdir) \
+	-I$(top_srcdir)/libmatenotify \
+	$(PACKAGE_CFLAGS)
+
 
 -include $(top_srcdir)/git.mk
