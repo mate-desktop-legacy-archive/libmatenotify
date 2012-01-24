@@ -8,12 +8,12 @@ depends=('gdk-pixbuf2')
 makedepends=('gtk2' 'gobject-introspection')
 groups=('mate')
 options=('!emptydirs' '!libtool')
-url="http://matsusoft.com.ar/projects"
-source=(http://sourceforge.net/projects/matede/files/${pkgver}/${pkgname}.tar.gz/download)
-sha256sums=('ce9d746d8ee0c05dffcd845367d1b067fd0b3a454e2ff8adfb3d42caf83585e0')
+url="http://matsusoft.com.ar/projects/mate/"
+source=()
+sha256sums=()
 
 build() {
-    cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/../../../"
     ./autogen.sh \
         --prefix=/usr \
         --disable-static || return 1
@@ -21,6 +21,6 @@ build() {
 }
 
 package() {
-    cd "${srcdir}/${pkgname}"
+	cd "${srcdir}/../../../"
     make DESTDIR="${pkgdir}" install || return 1
 }
