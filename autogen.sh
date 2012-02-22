@@ -13,9 +13,9 @@ REQUIRED_AUTOMAKE_VERSION=1.9
     exit 1
 }
 
-which mate-autogen.sh || {
+which mate-autogen || {
     echo "You need to install mate-common."
     exit 1
 }
 
-. mate-autogen.sh
+. mate-autogen
