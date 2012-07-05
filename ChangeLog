@@ -1,3 +1,109 @@
+commit acefd6d18d25689e93c8a93f81c90d5a0dd72145
+Merge: 271e7ed 98bd6dd
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu May 10 13:04:27 2012 -0700
+
+    Merge pull request #2 from benpicco/master
+    
+    sync with upstream
+
+commit 98bd6dd78f4a0d0871a5e720ce984bd501748590
+Author: Benjamin Valentin <benpicco@zedat.fu-berlin.de>
+Date:   Fri Mar 16 11:59:07 2012 +0100
+
+    forgot to properly move notify-features.h in 10e5753be31f015674b66dc3e43969dbcdf6141d
+
+ libmatenotify/notify-features.h.in |   42 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 42 insertions(+)
+
+commit 1a9b0f4b5427b0152495b1b229d8c09ab9cf4935
+Author: William Jon McCann <jmccann@redhat.com>
+Date:   Thu Oct 14 23:30:58 2010 -0400
+
+    Include the current headers first
+
+ tests/Makefile.am |    8 +++++---
+ tools/Makefile.am |    7 +++++--
+ 2 files changed, 10 insertions(+), 5 deletions(-)
+
+commit 10e5753be31f015674b66dc3e43969dbcdf6141d
+Author: William Jon McCann <jmccann@redhat.com>
+Date:   Sat Oct 9 01:15:12 2010 -0400
+
+    Use notify-features.h instead of features.h
+
+ configure.ac              |    2 +-
+ libmatenotify/Makefile.am |    2 +-
+ libmatenotify/notify.h    |    2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 56986dabccdda682a7e09d87597664d7fad3b64c
+Author: William Jon McCann <jmccann@redhat.com>
+Date:   Fri Oct 8 23:01:43 2010 -0400
+
+    Add a macro for determining the version of the library
+
+ configure.ac              |    6 ++++++
+ libmatenotify/Makefile.am |    1 +
+ libmatenotify/notify.h    |    1 +
+ 3 files changed, 8 insertions(+)
+
+commit fa5dc2ab59452e55ac8b23caaaabf323465802be
+Author: William Jon McCann <jmccann@redhat.com>
+Date:   Thu Oct 14 23:23:36 2010 -0400
+
+    Update for release
+
+ NEWS         |    8 ++++++++
+ configure.ac |    6 +++---
+ 2 files changed, 11 insertions(+), 3 deletions(-)
+
+commit 4d96cd1df9f0a1d910ec66fdafbaf6678f1836d8
+Author: Jonny Lamb <jonny@debian.org>
+Date:   Thu Jul 1 20:46:04 2010 -0400
+
+    Use correct variable in NULL check
+    
+    If you pass NULL as the fourth argument to notify_get_server_info it
+    segfaults.
+    
+    https://bugzilla.gnome.org/show_bug.cgi?id=623096
+    (cherry picked from commit 4830863bab3b6b67792dd8013f93d1093b9c0443)
+
+ libmatenotify/notify.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit faf376daf133bec6e9169a83ceb735c998ea6183
+Author: Martin Pitt <martin.pitt@ubuntu.com>
+Date:   Thu Jul 1 14:30:54 2010 +0200
+
+    Fix assertion when uniniting without any notifications
+    
+    The lazy initialization from commit 3dc04fa caused a small regression: When a
+    process would init and uninit libmatenotify without ever sending a notification,
+    _proxy was still NULL, which caused an assertion
+    
+    (process:20953): GLib-GObject-CRITICAL **: g_object_unref: assertion `G_IS_OBJECT (object)' failed
+    
+    Bug-Ubuntu: https://bugs.launchpad.net/bugs/570462
+    (cherry picked from commit 1a103f1eee373882a7ed5e2225fcd23bb10ecbc8)
+
+ libmatenotify/notify.c |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 271e7ed0aa83c523559547e86ff4d0f7f118f05c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Feb 22 23:30:54 2012 +0100
+
+    updates for 1.2 release
+
+ AUTHORS      |   11 +-
+ ChangeLog    | 1134 ++++++++--------------------------------------------------
+ README       |    1 +
+ autogen.sh   |    4 +-
+ configure.ac |    2 +-
+ 5 files changed, 162 insertions(+), 990 deletions(-)
+
 commit 1bc23e8d0b64bbd8d161367ef5b4632a4a268867
 Author: Perberos <perberos@gmail.com>
 Date:   Tue Jan 24 16:24:06 2012 -0300
@@ -5,7 +111,7 @@ Date:   Tue Jan 24 16:24:06 2012 -0300
     changing pkgbuild source method
 
  distro/archlinux/PKGBUILD |   10 +++++-----
- 1 files changed, 5 insertions(+), 5 deletions(-)
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
 commit e6d5ff95d09e7accbb82e1f52f3a47eb9ccbe1ed
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -33,7 +139,7 @@ Date:   Thu Dec 8 13:09:48 2011 -0300
  configure                  |14461 --------------------------------------------
  depcomp                    |  630 --
  docs/Makefile.in           |  644 --
- docs/reference/Makefile.in |  673 --
+ docs/reference/Makefile.in |  673 ---
  gtk-doc.make               |  230 -
  install-sh                 |  520 --
  libmatenotify/Makefile.in  |  678 ---
@@ -47,7 +153,7 @@ Date:   Thu Dec 8 13:09:48 2011 -0300
  missing                    |  376 --
  tests/Makefile.in          |  668 --
  tools/Makefile.in          |  557 --
- 23 files changed, 0 insertions(+), 43095 deletions(-)
+ 23 files changed, 43095 deletions(-)
 
 commit f3a6af932cb7f58cbf49533ada3e02ae489263f1
 Author: Steve Zesch <stevezesch2@gmail.com>
@@ -147,4 +253,4 @@ Date:   Thu Dec 1 21:12:12 2011 -0300
  tools/Makefile.am                                  |   13 +
  tools/Makefile.in                                  |  557 +
  tools/notify-send.c                                |  276 +
- 81 files changed, 52412 insertions(+), 0 deletions(-)
+ 81 files changed, 52412 insertions(+)
