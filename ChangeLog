@@ -1,3 +1,23 @@
+commit 576b8765cbef5292a0596eee8ec9a4c279aa6c56
+Author: Perberos <perberos@gmail.com>
+Date:   Wed Aug 8 15:01:34 2012 -0300
+
+    set version for libtool to looks like "1.4"
+
+ configure.ac |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 2e67ec7c8f47556da837c81c8859fedaf59e3b52
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Thu Jul 5 13:43:47 2012 -0400
+
+    Preparing for 1.4 release.
+
+ ChangeLog           |  114 +++++++++++++++++++++++++++++++++++++++++++++++++--
+ configure.ac        |    2 +-
+ distro/ubuntu/build |   23 -----------
+ 3 files changed, 111 insertions(+), 28 deletions(-)
+
 commit acefd6d18d25689e93c8a93f81c90d5a0dd72145
 Merge: 271e7ed 98bd6dd
 Author: Steve Zesch <stevezesch2@gmail.com>
