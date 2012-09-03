@@ -3,7 +3,7 @@ dnl Process this file with autoconf to create configure.
 dnl ################################################################
 dnl # Initialize autoconf
 dnl ################################################################
-AC_INIT([libmatenotify], [1.4.1], [https://github.com/mate-desktop/libmatenotify], [libmatenotify])
+AC_INIT([libmatenotify], [1.5.0], [https://github.com/mate-desktop/libmatenotify], [libmatenotify])
 AC_PREREQ(2.50)
 AC_CONFIG_SRCDIR(config.h.in)
 
