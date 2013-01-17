@@ -70,7 +70,7 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 dnl ################################################################
 dnl # Specify a header configuration file
 dnl ################################################################
-AM_CONFIG_HEADER(config.h)
+AC_CONFIG_HEADERS(config.h)
 
 dnl ################################################################
 dnl # Check for some standard stuff.
